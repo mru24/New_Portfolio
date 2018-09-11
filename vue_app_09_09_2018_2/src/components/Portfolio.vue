@@ -16,7 +16,7 @@
             <img :src=" item.image" alt="">
           </div>
 
-            <a :href="item.link" class="projectTitle">{{ item.name }}</a>
+            <a :href="item.link" class="projectTitle" target="_blank" rel="noreferrer nofollow noopener">{{ item.name }}</a>
 
           <div class="projectGithub">
             <img src="../assets/img/social/github.png" alt="Github icon" width="16">

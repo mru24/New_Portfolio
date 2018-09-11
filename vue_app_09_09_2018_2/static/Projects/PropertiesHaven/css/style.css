@@ -235,6 +235,7 @@ section {
 
 .landing nav {
   position: absolute;
+  z-index: 100
   bottom: 0;
   left: 0;
   width: 100%;
@@ -523,6 +524,7 @@ section {
   margin: 10px;
 }
 
+
 #props .container .navProp ul li a {
   font-size: 1.4em;
 }
@@ -532,21 +534,28 @@ section {
   clear: both;
 }
 
+#props .container .images ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 #props .container .images ul li {
   width: 180px;
   height: 180px;
   overflow: hidden;
   float: left;
-  margin: 2px;
+  margin: 8px;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   #props .container .images ul li {
     width: 130px;
     height: 130px;
   }
-}
+} */
 
 #props .container .images ul li img {
   -webkit-border-radius: 5px;
@@ -578,7 +587,7 @@ section {
   display: none;
   position: fixed;
   z-index: 999;
-  top: 10%;
+  top: 15%;
   left: 50%;
   -webkit-transform: translateX(-50%);
      -moz-transform: translateX(-50%);
@@ -607,9 +616,11 @@ section {
     width: 90%;
   }
 }
-
+.propmodal .propmodalClose{
+  height: 25px;
+}
 .propmodal .propmodalClose i {
-  font-size: 24px;
+  font-size: 34px;
   float: right;
   margin: 5px;
   cursor: pointer;
