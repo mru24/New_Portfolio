@@ -1,0 +1,1 @@
+Static single web page. HTML, CSS, SASS, Bootstrap 3.3.7, jQuery.

@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker')
+@import url('https://fonts.googleapis.com/css?family=Lato')
+
+@mixin bp-tablet
+  @media only screen and (max-width: 1200px)
+    @content
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body, html
+  width: 100%
+  height: 100vh
+
+body
+  background: #bfbfbf
+  font-family: 'Lato', sans-serif
+
+ul
+  list-style-type: none
+h1
+  color: #222
+h2
+  color: #444
+  padding: 15px 0
+  border-bottom: 1px solid #bbb
+  margin: 15px 0
+h3
+  color: #555
+p
+  color: #666
+a
+  text-decoration: none
+a:active
+  text-decoration: none
+a:visited
+  text-decoration: none
+
+hr
+  border-bottom: 1px solid #bbb
+
+section
+  width: 100%
+  height: 100vh
+  padding-top: 50px
+  @include bp-tablet
+    min-height: 100vh
+    height: auto
+.container
+  background: #efefef
+  box-shadow: 0 0 20px #999
+  padding: 30px
+  border-radius: 8px
+
+
+
+#home
+  position: relative
+  margin-top: 25px
+  .landing
+    position: absolute
+    top: 0
+    right: 0
+    width: 70%
+    box-shadow: 0 0 30px #666
+    border-radius: 8px
+    img
+      border-radius: 8px
+    .carousel-caption
+      position: absolute
+      top: 30%
+      h1
+        color: #fff
+        font-size: 4.5vw
+        font-weight: bold
+      p
+        color: #eee
+        margin-top: 2vw
+
+  nav
+    $height: 100px
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: $height
+    border: 1px solid #bbb
+    background: rgba(#ffffff, 0.5)
+    clear: both
+    transition: all .4s
+    .brand-logo
+      float: left
+      width: 300px
+      line-height: $height
+      text-align: center
+      font-size: 2.5em
+      color: black
+      font-family: 'Permanent Marker', cursive
+      transition: all .4s
+      span
+        font-family: 'Lato', sans-serif
+        font-weight: 700
+        color: red
+    ul
+      float: right
+      li
+        display: inline-block
+        width: 130px
+        text-align: center
+        transition: all .4s
+        a
+          display: block
+          width: 100%
+          height: 100%
+          font-size: 1.4em
+          color: black
+          text-decoration: none
+          transition: all .4s
+          &:hover
+            color: red
+          i
+            display: block
+            width: 100%
+            text-align: center
+            margin-top: 10px
+            color: #30be18
+            text-shadow: 0 0 5px #eee
+            transition: all .4s
+          &:hover > i
+            color: red
+
+
+  .sticky
+    $height: 50px
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 9999
+    width: 100%
+    height: $height
+    line-height: 50px
+    border: 1px solid #bbb
+    .brand-logo
+      float: left
+      width: 200px
+      line-height: $height - 10px
+      text-align: center
+      font-size: 1.5em
+      color: black
+      font-family: 'Permanent Marker', cursive
+      span
+        font-family: 'Lato', sans-serif
+        font-weight: 700
+        color: red
+    ul
+      float: right
+      li
+        display: inline-block
+        width: 130px
+        height: $height
+        margin: 0
+        text-align: center
+        a
+          font-size: 1.4em
+          color: black
+          i
+            display: none
+  nav
+    @include bp-tablet
+      display: none
+
+
+  #social
+    position: absolute
+    top: 20%
+    left: 5%
+    width: 90px
+    height: 360px
+    ul
+      li
+        width: 90px
+        height: 90px
+        line-height: 90px
+        text-align: center
+        a
+          display: block
+          width: 100%
+          height: 100%
+          font-size: 3em
+          i
+            text-shadow: 0 0 5px #999
+            transition: .4s
+        a:hover > i
+          transform: scale(1.3)
+
+#about
+  img
+    display: block
+    width: 80%
+    margin: 20px auto
+    border-radius: 8px
+    box-shadow: 0 0 10px #bbb
+  h4
+    text-align: right
+  p
+    text-indent: 30px
+
+
+
+#props
+  .container
+    transition: all .4s
+    .navProp
+      border-bottom: 1px solid #bbb
+      ul
+        text-align: center
+        li
+          display: inline-block
+          margin: 10px
+          a
+            font-size: 1.4em
+    .images
+      margin-top: 40px
+      clear: both
+      ul
+        li
+          width: 180px
+          height: 180px
+          overflow: hidden
+          float: left
+          margin: 2px
+          cursor: pointer
+          img
+            border-radius: 5px
+            box-shadow: 0 0 5px #bbb
+            width: 100%
+            transition: .3s
+
+        li:hover > img
+          transform: scale(1.2)
+
+
+
+.current > a
+  color: #812727
+
+
+.propmodal
+  display: none
+  position: fixed
+  z-index: 999
+  top: 10%
+  left: 50%
+  transform: translateX(-50%)
+  width: 560px
+  padding-bottom: 20px
+  border: 1px solid #bbb
+  border-radius: 8px
+  box-shadow: 0 0 10px #bbb
+  background: white
+  clear: both
+  transition: .5s
+  .propmodalClose
+    i
+      font-size: 24px
+      float: right
+      margin: 5px
+      cursor: pointer
+  .propmodalImage
+    float: left
+    width: 60%
+    img
+      width: 100%
+  .propmodalText
+    float: left
+    width: 40%
+    padding: 10px
+    h4
+      border-bottom: 1px solid #bbb
+    h6
+      font-weight: bold
+      color: #3b8a47
+
+#team
+  .image
+    margin-bottom: 20px
+    position: relative
+    overflow: hidden
+    box-shadow: 0 0 20px #999
+    img
+      width: 100%
+    .imageCaption
+      position: absolute
+      bottom: -35px
+      width: 100%
+      text-align: center
+      background: rgba(#ffffff, 0.7)
+      transition: .4s
+  .image:hover > .imageCaption
+    bottom: 0
+
+#contact
+  margin-top: 50px
+  ul
+    .fa
+      margin-right: 15px
+  input
+    width: 90%
+  textarea
+    width: 90%
+    height: 200px
+    resize: none
+
+#footer
+  margin-top: 50px
+  background: #292929
+  .container
+    background: inherit
+    box-shadow: none
+    .brand-logo
+      float: left
+      width: 300px
+      text-align: center
+      font-size: 2.5em
+      color: white
+      font-family: 'Permanent Marker', cursive
+      transition: all .4s
+      span
+        font-family: 'Lato', sans-serif
+        font-weight: 700
+        color: red
+    ul
+      li
+        display: inline-block
+    .footer-social
+      li
+        width: 40px
+        height: 40px
+        line-height: 40px
+        margin-right: 20px
+        text-align: center
+        a
+          font-size: 38px
+          i
+            transition: .4s
+        a:hover > i
+          transform: scale(1.3)
+    .footer-nav
+      margin-top: 30px
+      li
+        width: 18%
+        text-align: center
+        a
+          font-size: 19px
+          transition: .2s
+          &:hover
+            color: #bbb
+
+.copyright
+  text-align: center
+  color: #999
+
+#arrowUp
+  display: none
+  position: fixed
+  bottom: 10px
+  right: 20px
+  z-index: 9999
+  a
+    font-size: 60px
+    i
+
+
+
+.fa-facebook
+  color: #3b5998
+.fa-twitter
+  color: #0084b4
+.fa-linkedin
+  color: #0077b5
+.fa-youtube
+  color: #cc181e

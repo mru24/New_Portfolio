@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One");
+.heading {
+  font-family: 'Fredoka One', cursive;
+  color: #777;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #bbb;
+}
+
+.container {
+  width: 98%;
+  margin: auto;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    width: 90%;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 99%;
+    padding: 0;
+  }
+}
+
+.landing {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background: rgba(27, 27, 27, 0.95);
+}
+
+.landing img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 320px;
+  z-index: 9999;
+}
+
+.landing .fullscreen-video-wrap {
+  width: 100%;
+}
+
+.landing .fullscreen-video-wrap::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: rgba(34, 84, 112, 0.3);
+}
+
+.landing .fullscreen-video-wrap video {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.landing .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 310px;
+  margin: auto;
+  z-index: 20;
+  opacity: .7;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  -moz-transition: .4s;
+  transition: .4s;
+}
+
+.landing .title:hover {
+  opacity: 1;
+}
+
+.landing .title h1 a {
+  color: white;
+  padding: 20px 30px;
+  border: 3px solid white;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.hidden {
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+      -ms-transform: scale(0);
+       -o-transform: scale(0);
+          transform: scale(0);
+}
+
+nav {
+  background: rgba(60, 60, 60, 0.3);
+}
+
+nav .nav-wrapper .brand-logo img {
+  width: 180px;
+  margin-left: 30px;
+  margin-top: -5px;
+}
+
+@media only screen and (max-width: 600px) {
+  nav .nav-wrapper .brand-logo img {
+    margin-top: -8px;
+  }
+}
+
+nav .nav-wrapper ul li a {
+  letter-spacing: 3px;
+  font-size: 18px;
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 1px 1px 5px #888;
+}
+
+.mainPage {
+  width: 100%;
+  background: #ebebeb;
+  padding-top: 60px;
+}
+
+.slider h3 {
+  background: white;
+  font-size: 3em;
+  color: #777;
+  mix-blend-mode: overlay;
+  opacity: 0.8;
+  font-family: 'Fredoka One', cursive;
+  padding: 20px;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+@media only screen and (max-width: 600px) {
+  .slider h3 {
+    font-size: 2em;
+  }
+}
+
+.offer .card .card-content {
+  min-height: 200px;
+}
+
+.lastMinute {
+  margin: auto;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lastMinute::before {
+  position: absolute;
+  z-index: 90;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  -moz-transition: all .2s;
+  transition: all .2s;
+}
+
+.lastMinute::after {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  top: 10%;
+  left: -10%;
+  text-align: center;
+  -webkit-transform: rotate(35deg);
+     -moz-transform: rotate(35deg);
+      -ms-transform: rotate(35deg);
+       -o-transform: rotate(35deg);
+          transform: rotate(35deg);
+  content: 'Last Minute';
+  font-family: 'Fredoka One', cursive;
+  font-size: 26px;
+  color: red;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  -moz-transition: all .2s;
+  transition: all .2s;
+}
+
+.lastMinute:hover:before, .lastMinute:hover:after {
+  top: -100%;
+}
+
+.info {
+  background: #ebebeb;
+}
+
+.newsletter, .infoBox {
+  min-height: 360px;
+  margin-bottom: 5px;
+  background: white;
+  padding: 0 15px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+}
+
+@media only screen and (max-width: 992px) {
+  .newsletter, .infoBox {
+    height: auto;
+  }
+}
+
+.newsletter button, .infoBox button {
+  display: block;
+  margin: auto;
+}
+
+.newsletter li, .infoBox li {
+  margin-left: 20px;
+  list-style-image: url(../img/check-mark-resize.png);
+}
+
+.newsletter h6, .infoBox h6 {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+footer {
+  width: 100%;
+  padding: 20px;
+  background: #050e86;
+}
